@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 – Dynamic Web Fundamentals – Derek Nielsen</title>
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Derek Nielsen | A personal home page showcasing coursework, links, and project content.">
+  <meta name="author" content="Derek Nielsen">
+  <link rel="stylesheet" href="base.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script src="getdates.js" defer></script>
 </head>
+
 <body>
-    <h1>WDD 131 - Derek</h1>
+  <header>
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    <nav>
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Scripture</a>
+      <a href="#">Final Project</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Derek Nielsen</h1>
+
+    <section class="card">
+      <h2>About Me</h2>
+      <img src="images/profile.jpg" alt="Photo of Derek Nielsen">
+      <p>Hello! My name is Derek Nielsen. I’m studying web development and enjoy building interactive and visually appealing websites. I love the outdoors and learning new technologies.</p>
+    </section>
+
+    <section class="card">
+      <h2>My Interests</h2>
+      <img src="images/rafting.jpg" alt="White water rafting image">
+      <p>I’m passionate about design, coding, and adventure. When I’m not coding, I enjoy rafting, hiking, and exploring nature. These experiences inspire my creativity in web projects.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> | Derek Nielsen | United States</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>
