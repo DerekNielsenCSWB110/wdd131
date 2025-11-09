@@ -4,38 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WDD 131 – Dynamic Web Fundamentals – Derek Nielsen</title>
-  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Derek Nielsen | A personal home page showcasing coursework, links, and project content.">
+  <meta name="description" content="Personal home page for WDD 131 – Dynamic Web Fundamentals by Derek Nielsen.">
   <meta name="author" content="Derek Nielsen">
-  <link rel="styles" href="base.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles/base.css">
+
+  <!-- JavaScript -->
   <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
   <header>
-    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    <h1>WDD 131 – Dynamic Web Fundamentals</h1>
     <nav>
-      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-      <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
-      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Scripture</a>
-      <a href="https://dereknielsencswb110.github.io/wdd131/temples.html" target=""_blank">Temple Album Assignment</a>
+      <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank" rel="noopener noreferrer">Scripture</a>
+      <a href="https://dereknielsencswb110.github.io/wdd131/temples.html" target="_blank" rel="noopener noreferrer">Temple Album</a>
       <a href="#">Final Project</a>
     </nav>
   </header>
 
   <main>
-    <h1>Derek Nielsen</h1>
-
-    <section class="card">
-      <h2>About Me</h2>
-      <img src="images/profile.jpg" alt="Photo of Derek Nielsen">
-      <p>Hello! My name is Derek Nielsen. I’m studying web development and enjoy building interactive and visually appealing websites.</p>
+    <section class="intro">
+      <h2>Hello, I’m <span class="highlight">Derek Nielsen</span></h2>
+      <p>I’m studying web development and enjoy creating websites that are both functional and visually appealing. I love combining design and code to bring ideas to life.</p>
     </section>
 
-    <section class="card">
-      <h2>My Interests</h2>
-      <img src="images/rafting.jpg" alt="Sketching image">
-      <p>I’m passionate about design, coding, and adventure. When I’m not coding, I enjoy sketching my ideas for projects. This inspires my creativity in web projects.</p>
+    <section class="card-grid">
+      <div class="card">
+        <img src="images/profile.jpg" alt="Photo of Derek Nielsen">
+        <h3>About Me</h3>
+        <p>I’m passionate about technology and how it can coincide with creativity and learning. When I'm not coding. I like to sketch my ideas so I have a visual representation of it, That way I can write have something to go along with my writing.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/rafting.jpg" alt="Rafting adventure">
+        <h3>My Interests</h3>
+        <p>I enjoy coding, design and games. Working on my projects motivate me to keep learning new creative ways to engage the player.</p>
+      </div>
     </section>
   </main>
 
