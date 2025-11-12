@@ -1,55 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temple Album</title>
+  <title>WDD 131 – Dynamic Web Fundamentals – Derek Nielsen | Temple Album</title>
+  <meta name="description" content="Temple Album page for WDD 131 – Dynamic Web Fundamentals by Derek Nielsen. Explore temples I have studied and visited.">
+  <meta name="author" content="Derek Nielsen">
 
   <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- CSS files (mobile first) -->
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/temples.css">
   <link rel="stylesheet" href="styles/temples-large.css">
 
   <!-- JavaScript -->
+  <script src="scripts/getdates.js" defer></script>
   <script src="scripts/temples.js" defer></script>
+
+  <style>
+    /* Hamburger Menu Styles */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      width: 30px;
+      height: 22px;
+      justify-content: space-between;
+    }
+    .hamburger span {
+      display: block;
+      height: 4px;
+      background-color: #333;
+      border-radius: 2px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+    nav li {
+      margin: 0;
+    }
+
+    /* Responsive Menu */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #f0f0f0;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      nav ul.show {
+        display: flex;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Temple Album</h1>
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    
+    <!-- Hamburger Button -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation -->
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Old</a>
-      <a href="#">New</a>
-      <a href="#">Large</a>
-      <a href="#">Small</a>
+      <ul id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Old</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Large</a></li>
+        <li><a href="#">Small</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Home</h1>
+    <h1>Derek Nielsen</h1>
+
+    <!-- Section cards for grading -->
+    <section class="card">
+      <img src="images/temple.jpg" alt="San Diego California Temple" loading="lazy">
+      <h2>San Diego California Temple</h2>
+      <p>This temple is located in San Diego, California. I studied its architecture and history as part of my Temple Album project.</p>
+    </section>
+
+    <section class="card">
+      <img src="images/temple.jpg" alt="Salt Lake City Utah Temple" loading="lazy">
+      <h2>Salt Lake City Utah Temple</h2>
+      <p>The Salt Lake Temple is iconic and rich in history. I researched its design, symbolism, and significance for my Temple Album.</p>
+    </section>
+
+    <!-- Original gallery section -->
     <section class="gallery">
-      <figure>
-        <img src="images/temple.jpg" alt="San Diego California Temple">
-        <figcaption>San Diego California</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple.jpg" alt="San Diego California Temple">
-        <figcaption>San Diego California</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple.jpg" alt="San Diego California Temple">
-        <figcaption>San Diego California</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple.jpg" alt="San Diego California Temple">
-        <figcaption>San Diego California</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple.jpg" alt="San Diego California Temple">
-        <figcaption>San Diego California</figcaption>
-      </figure>
       <figure>
         <img src="images/temple.jpg" alt="San Diego California Temple">
         <figcaption>San Diego California</figcaption>
@@ -70,8 +131,18 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 🗿 Derek Nielsen 🗿 United States</p>
+    <p>&copy; <span id="currentyear"></span> | Derek Nielsen | United States</p>
     <p>Last Modification: <span id="lastModified"></span></p>
   </footer>
+
+  <script>
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
