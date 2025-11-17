@@ -1,8 +1,9 @@
-// FOOTER YEAR
-document.getElementById("year").textContent = new Date().getFullYear();
+// Footer Year
+document.getElementById("currentyear").textContent = new Date().getFullYear();
 
-// LAST MODIFIED
-document.getElementById("last-modified").textContent = document.lastModified;
+// Last Modified
+document.getElementById("lastmodified").textContent = document.lastModified;
+
 
 // WIND CHILL CALCULATION
 function calculateWindChill(tempC, windKmh) {

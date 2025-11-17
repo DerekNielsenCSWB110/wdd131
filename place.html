@@ -1,55 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Explore key details and weather information about San Diego, California, including climate, population, and coastal highlights.">
-    <meta name="author" content="Derek Nielsen">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- REQUIRED SEO FIXES -->
+    <meta name="description" content="San Diego travel highlights including weather, culture, and local attractions. Explore the beauty of Southern California." />
+    <meta name="author" content="Derek Nielsen" />
+
     <title>San Diego, California</title>
-    <link rel="stylesheet" href="styles/place.css">
+
+    <link rel="stylesheet" href="styles/place.css" />
     <script src="scripts/place.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1>San Diego, California</h1>
+        <h1>San Diego</h1>
     </header>
 
-    <!-- HERO IMAGE -->
-    <picture>
-        <source srcset="images/large-image.webp" media="(min-width: 700px)">
-        <img src="images/small-image.webp" alt="San Diego coastline and skyline" class="hero">
-    </picture>
-
     <main>
-        <!-- DATA SECTION -->
-        <section class="data">
-            <h2>City Data</h2>
 
-            <p><strong>Population:</strong> 1,383,000 (2024 est.)</p>
-            <p><strong>Founded:</strong> 1769</p>
-            <p><strong>Region:</strong> Southern California</p>
-            <p><strong>Classification:</strong> Coastal City</p>
-            <p><strong>Elevation:</strong> 62 ft (19 m)</p>
+        <!-- ==========================
+             HERO SECTION
+        =========================== -->
+        <section class="hero">
+
+            <!-- RESPONSIVE HERO IMAGE -->
+            <picture>
+                <source media="(min-width: 900px)" srcset="images/large-image.webp">
+                <source media="(min-width: 600px)" srcset="images/small-image.webp">
+                <img
+                    src="images/large-image.webp"
+                    alt="San Diego coastline"
+                    class="hero-image"
+                >
+            </picture>
+
+            <!-- FLOATING INFO (DESKTOP ONLY) -->
+            <div class="info-floating">
+                <h2 id="city-name">San Diego, California</h2>
+                <p id="current-date">11/15/25</p>
+
+                <div class="weather-summary">
+                    <h2>Weather</h2>
+                    <p>Temperature: <span id="temperature">--</span></p>
+                    <p>Wind: <span id="wind-speed">--</span></p>
+                    <p>Wind Chill: <span id="windchill">--</span></p>
+                </div>
+            </div>
+
         </section>
 
-        <!-- WEATHER SECTION -->
-        <section class="weather">
-            <h2>Weather</h2>
+        <!-- MOBILE/WINDOW VIEW INFO BLOCK -->
+        <div class="info-block">
+            <h2 id="city-name-mobile">San Diego, California</h2>
+            <p id="current-date-mobile">Date</p>
 
-            <!-- Only shows on mobile -->
-            <img src="images/weather-icon.svg" alt="weather icon" class="weather-icon mobile-only">
+            <div class="weather-summary">
+                <h2>Weather</h2>
+                <p>Temperature: <span id="temperature-mobile">--</span></p>
+                <p>Wind: <span id="wind-speed-mobile">--</span></p>
+                <p>Wind Chill: <span id="windchill-mobile">--</span></p>
+            </div>
+        </div>
 
-            <!-- These values work with the JS wind chill calculator -->
-            <p><strong>Temperature:</strong> <span id="temp">18</span> °C</p>
-            <p><strong>Wind Speed:</strong> <span id="wind">10</span> km/h</p>
-            <p><strong>Wind Chill:</strong> <span id="windchill">N/A</span></p>
+        <!-- ==========================
+             CONTENT SECTIONS
+        =========================== -->
+
+        <section>
+            <div class="card">
+                <h2>About San Diego</h2>
+                <p>
+                    San Diego is known for its warm climate, stunning beaches, vibrant culture,
+                    and iconic coastline. From Balboa Park to La Jolla Cove, the city combines
+                    outdoor adventure with rich history and world-class attractions.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Local Attractions</h2>
+                <ul>
+                    <li>San Diego Zoo</li>
+                    <li>La Jolla Cove</li>
+                    <li>Balboa Park</li>
+                    <li>Coronado Island</li>
+                    <li>Sunset Cliffs</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Culture & Lifestyle</h2>
+                <p>
+                    With a blend of surf culture, vibrant food scenes, and historic districts,
+                    San Diego delivers both relaxation and excitement. Its coastal sunsets are among
+                    the most photographed in California.
+                </p>
+            </div>
         </section>
+
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Derek Nielsen, California — WDD131</p>
-        <p>Last Modified: <span id="last-modified"></span></p>
+        <p>&copy; <span id="currentyear"></span> | Derek Nielsen | San Diego</p>
+        <p>Last Modified: <span id="lastmodified"></span></p>
     </footer>
+
 </body>
 </html>
