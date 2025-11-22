@@ -21,14 +21,12 @@
   <script src="scripts/filtered-temples.js" defer></script>
 </head>
 <body>
+
+  <!-- HEADER -->
   <header>
-    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    <h1>Temple Album – Derek Nielsen</h1>
 
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
-    </div>
-
+    <!-- NAVIGATION -->
     <nav>
       <ul id="nav-links">
         <li><a href="#" data-filter="all">Home</a></li>
@@ -38,24 +36,25 @@
         <li><a href="#" data-filter="small">Small</a></li>
       </ul>
     </nav>
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
   </header>
 
+  <!-- MAIN -->
   <main>
-    <h1>Derek Nielsen Temple Album</h1>
-
-    <!-- Temple cards container -->
-    <section id="temple-cards" class="gallery"></section>
+    <section id="temple-cards" class="gallery">
+      <!-- Temple cards will be dynamically injected here -->
+    </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; <span id="currentyear"></span> | Derek Nielsen | United States</p>
     <p>Last Modification: <span id="lastModified"></span></p>
   </footer>
 
-  <script>
-    // Footer dynamic year & last modified
-    document.getElementById("currentyear").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
-  </script>
 </body>
 </html>
