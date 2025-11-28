@@ -28,6 +28,7 @@ header h1 {
   margin-bottom: 1rem;
 }
 
+/* Navigation */
 nav {
   display: flex;
   justify-content: center;
@@ -65,11 +66,12 @@ main {
   font-weight: 700;
 }
 
-/* Card Grid */
-.card-grid {
+/* Cards (default grid, small screens) */
+#temple-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
+  padding: 1rem;
 }
 
 .card {
@@ -95,6 +97,16 @@ main {
   margin-bottom: 1rem;
 }
 
+.card h2 {
+  font-size: 1.25rem;
+  margin: 0.5rem 1rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin: 0.25rem 1rem 1rem;
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -106,10 +118,6 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-
   header h1 {
     font-size: 1.5rem;
   }
