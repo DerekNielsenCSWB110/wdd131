@@ -1,0 +1,40 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 2rem;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+h1, h2 {
+    color: #1a1a8c; /* primary color */
+}
+
+h3 {
+    color: #d94f1c; /* accent color */
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.color-sample {
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    margin-left: 1rem;
+    border: 1px solid #000;
+}
+
+.wireframe {
+    border: 2px dashed #ccc;
+    padding: 1rem;
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-top: 0.5rem;
+}
