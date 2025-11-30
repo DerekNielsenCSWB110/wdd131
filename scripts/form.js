@@ -36,3 +36,11 @@ products.forEach(product => {
     option.value = product.id;           // stored value
     productSelect.appendChild(option);
 });
+
+// Update Last Modified Date in Footer
+document.addEventListener("DOMContentLoaded", () => {
+    const lastMod = document.getElementById("lastModified");
+    if (lastMod) {
+        lastMod.textContent = "Last Modification: " + document.lastModified;
+    }
+});
