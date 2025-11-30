@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+<header>
+    <h1>Review Submitted</h1>
+</header>
+
+<main>
+    <h2>Your Submission</h2>
+
+    <div class="summary">
+        <p><strong>Product:</strong> <span id="sProduct"></span></p>
+        <p><strong>Rating:</strong> <span id="sRating"></span></p>
+        <p><strong>Installation Date:</strong> <span id="sInstall"></span></p>
+        <p><strong>Features:</strong> <span id="sFeatures"></span></p>
+        <p><strong>Review:</strong> <span id="sReview"></span></p>
+        <p><strong>Name:</strong> <span id="sUser"></span></p>
+    </div>
+
+    <p class="counter">Total Reviews This Browser: <span id="reviewCount"></span></p>
+</main>
+
+<footer>
+    <p>&copy;2025 | Derek Nielsen |</p>
+</footer>
+
+<script>
+    // Read URL parameters
+const params = new URLSearchParams(window.location.search);
+
+function display(id, value) {
+    document.getElementById(id).textContent = value || "None";
+}
+
+// DISPLAY FIELDS
+display("sProduct", params.get("product"));
+display("sRating", params.get("rating"));
+display("sInstall", params.get("install"));
+display("sReview", params.get("reviewText"));
+display("sUser", params.get("user"));
+
+// FEATURES (checkboxes)
+const features = params.getAll("features");
+display("sFeatures", features.join(", "));
+
+// LOCAL STORAGE REVIEW COUNTER
+let count = Number(localStorage.getItem("reviewCount")) || 0;
+count++;
+localStorage.setItem("reviewCount", count);
+
+// Show on page
+document.getElementById("reviewCount").textContent = count;
+</script>
+
+</body>
+</html>

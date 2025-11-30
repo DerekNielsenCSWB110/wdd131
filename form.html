@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="css/form.css">
+    <script defer src="js/form.js"></script>
+</head>
+
+<body>
+<header>
+    <h1>Product Review</h1>
+</header>
+
+<main>
+    <form method="get" action="review.html">
+
+        <!-- PRODUCT NAME -->
+        <label for="product">Product Name</label>
+        <select id="product" name="product" required>
+            <option value="" disabled selected>Select a Product ...</option>
+            <!-- JS will populate options -->
+        </select>
+
+        <!-- RATING -->
+        <fieldset class="rating-field">
+            <legend>Overall Rating</legend>
+
+            <label>
+                <input type="radio" name="rating" value="1" required>
+                ★☆☆☆☆
+            </label>
+
+            <label>
+                <input type="radio" name="rating" value="2">
+                ★★☆☆☆
+            </label>
+
+            <label>
+                <input type="radio" name="rating" value="3">
+                ★★★☆☆
+            </label>
+
+            <label>
+                <input type="radio" name="rating" value="4">
+                ★★★★☆
+            </label>
+
+            <label>
+                <input type="radio" name="rating" value="5">
+                ★★★★★
+            </label>
+        </fieldset>
+
+        <!-- DATE -->
+        <label for="install">Date of Installation</label>
+        <input type="date" id="install" name="install" required>
+
+        <!-- FEATURES -->
+        <fieldset>
+            <legend>Which features did you find useful? (Check all that apply)</legend>
+
+            <label><input type="checkbox" name="features" value="Durability"> Durability</label>
+            <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
+            <label><input type="checkbox" name="features" value="Performance"> Performance</label>
+            <label><input type="checkbox" name="features" value="Design"> Design</label>
+        </fieldset>
+
+        <!-- WRITTEN REVIEW -->
+        <label for="reviewText">Written Review (Optional)</label>
+        <textarea id="reviewText" name="reviewText" rows="5"></textarea>
+
+        <!-- USER NAME -->
+        <label for="user">Your Name (Optional)</label>
+        <input type="text" id="user" name="user">
+
+        <input type="submit" value="Post Review" class="submit-btn">
+    </form>
+</main>
+
+<footer>
+    <p>&copy;2025 | Derek Nielsen |</p>
+    <p id="lastModified"></p>
+</footer>
+
+<script>
+    document.getElementById("lastModified").textContent =
+        "Last Modification: " + document.lastModified;
+</script>
+
+</body>
+</html>
