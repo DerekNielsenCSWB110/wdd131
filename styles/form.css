@@ -86,3 +86,15 @@ footer {
     font-weight: bold;
     color: #45006a;
 }
+
+@media (max-width: 600px) {
+    form {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    fieldset label {
+        display: block;
+        margin-bottom: .5rem;
+    }
+}

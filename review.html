@@ -31,33 +31,7 @@
     <p>&copy;2025 | Derek Nielsen |</p>
 </footer>
 
-<script>
-    // Read URL parameters
-const params = new URLSearchParams(window.location.search);
-
-function display(id, value) {
-    document.getElementById(id).textContent = value || "None";
-}
-
-// DISPLAY FIELDS
-display("sProduct", params.get("product"));
-display("sRating", params.get("rating"));
-display("sInstall", params.get("install"));
-display("sReview", params.get("reviewText"));
-display("sUser", params.get("user"));
-
-// FEATURES (checkboxes)
-const features = params.getAll("features");
-display("sFeatures", features.join(", "));
-
-// LOCAL STORAGE REVIEW COUNTER
-let count = Number(localStorage.getItem("reviewCount")) || 0;
-count++;
-localStorage.setItem("reviewCount", count);
-
-// Show on page
-document.getElementById("reviewCount").textContent = count;
-</script>
+<script src="scripts/review.js" defer></script>
 
 </body>
 </html>
